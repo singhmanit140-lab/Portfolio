@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+<title>Manit Singh — Creator / Filmmaker</title>
+
+<meta
+  name="description"
+  content="Manit Singh — student, filmmaker, content creator and creative based in Delhi, India."
+/>
+
+<meta property="og:title" content="Manit Singh — Creator / Filmmaker" />
+<meta property="og:description" content="Student. Creator. Filmmaker. Always on another side quest." />
+<meta property="og:type" content="website" />
+
+<meta name="theme-color" content="#000000" />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Ctext x='16' y='23' font-family='Arial' font-size='18' font-weight='bold' text-anchor='middle' fill='%23fff'%3EM%3C/text%3E%3C/svg%3E" />
+
+<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="is-booting">
+
+<div class="backdrop" aria-hidden="true"></div>
+
+<!-- ==================== LOADER ==================== -->
+<div id="boot" class="boot" role="status" aria-label="Loading portfolio">
+  <div class="boot__name">MANIT<span>.</span></div>
+
+  <div class="boot__bar">
+    <span id="bootFill"></span>
+  </div>
+
+  <div class="boot__pct" id="bootPct">000</div>
+</div>
+
+
+<!-- ==================== FIXED CONTROLS ==================== -->
+<div class="ctl">
+  <button
+    class="ctl__b"
+    id="invertToggle"
+    aria-pressed="false"
+    type="button"
+  >
+    invert
+  </button>
+
+  <button
+    class="ctl__b"
+    id="soundToggle"
+    aria-pressed="false"
+    type="button"
+  >
+    sound off
+  </button>
+</div>
+
+
+<main id="top">
+
+<section class="sec sec--dark hero" id="hero">
+
+  <div class="stage hero__stage" data-rise>
+
+    <img
+      src="assets/el/star-a.png"
+      alt=""
+      class="el el--star-a"
+      aria-hidden="true"
+    />
+
+    <img
+      src="assets/el/star-b.png"
+      alt=""
+      class="el el--star-b"
+      aria-hidden="true"
+    />
+
+    <img
+      src="assets/el/dice.png"
+      alt=""
+      class="el el--dice"
+      aria-hidden="true"
+    />
+
+    <div class="hero__eyebrow">
+      DELHI, INDIA · 2026
+    </div>
+
+    <h1 class="hero__name">
+      MANIT
+    </h1>
+
+    <div class="hero__role">
+      <span>student</span>
+      <span>creator</span>
+      <span>filmmaker</span>
+    </div>
+
+    <p class="hero__intro">
+      Making things, trying things,<br />
+      chasing whatever comes next.
+    </p>
+
+    <div class="hero__index">
+      01 / 05
+    </div>
+
+  </div>
+
+  <a
+    class="cue"
+    href="#showreel"
+    data-nav
+    aria-label="Scroll to showreel"
+  >
+    <i></i>
+  </a>
+
+</section>
+
+<!-- ==========================================================
+     02 · SHOWREEL
+========================================================== -->
+<section class="sec sec--dark showreel" id="showreel">
+
+  <div class="showreel__inner">
+
+    <div class="section-label">
+      <span>02</span>
+      <span>SHOWREEL</span>
+    </div>
+
+    <div class="showreel__heading">
+      <h2>
+        a little bit<br />
+        of everything.
+      </h2>
+
+      <p>
+        Film · Content · Sport · Camera · Experiments
+      </p>
+    </div>
+
+    <div class="showreel__video">
+
+      <!--
+        PUT YOUR MAIN SHOWREEL HERE:
+
+        assets/reel/manit-showreel.mp4
+
+        Recommended:
+        45–75 seconds
+        1080p
+        H.264 MP4
+        Keep the file reasonably compressed.
+      -->
+
+      <video
+        id="showreelVideo"
+        poster="assets/reel/manit-sowreel.jpg"
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        controls
+      >
+        <source
+          src="assets/reel/manit-sowreel.mp4"
+          type="video/mp4"
+        />
+
+        Your browser does not support video.
+      </video>
+
+      <div class="showreel__placeholder">
+        <span>SHOWREEL</span>
+        <small>add assets/reel/manit-showreel.mp4</small>
+      </div>
+
+    </div>
+
+    <div class="showreel__bottom">
+      <span>SELECTED WORK · 2024—2026</span>
+      <span>PLAY / PAUSE</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ==========================================================
+     03 · ARCHIVE / PSP
+========================================================== -->
+<section class="sec sec--dark machine" id="work">
+
+  <div class="stage machine__art" aria-hidden="true">
+
+    <img
+      src="assets/el/flower.png"
+      alt=""
+      class="el el--flower"
+    />
+
+  </div>
+
+  <div class="machine__header">
+
+    <div class="section-label">
+      <span>03</span>
+      <span>THE ARCHIVE</span>
+    </div>
+
+    <p>
+      projects, experiments<br />
+      & things I've made.
+    </p>
+
+  </div>
+
+  <div class="machine__stage">
+
+    <canvas id="pspCanvas"></canvas>
+
+    <div
+      class="machine__loading"
+      id="pspLoading"
+      aria-live="polite"
+    >
+      <i class="spin" aria-hidden="true"></i>
+      <span>loading archive</span>
+    </div>
+
+  </div>
+
+  <div class="rail" id="rail" aria-live="polite">
+
+    <b id="railIdx">01</b>
+
+    <i id="railTot">/01</i>
+
+    <a
+      class="rail__open"
+      id="railOpen"
+      href="#"
+      target="_blank"
+      rel="noopener"
+      aria-label="Open selected project"
+    >
+      ↗
+    </a>
+
+  </div>
+
+  <div class="keys" aria-hidden="true">
+    <kbd>←</kbd>
+    <kbd>→</kbd>
+    <kbd>✕</kbd>
+  </div>
+
+  <div class="machine__hint">
+    DRAG THE MACHINE · USE THE BUTTONS · EXPLORE
+  </div>
+
+</section>
+
+
+<!-- ==========================================================
+     04 · SIDE QUESTS
+========================================================== -->
+<section class="sec sec--dark quests" id="quests">
+
+  <div class="quests__inner">
+
+    <div class="section-label">
+      <span>04</span>
+      <span>SIDE QUESTS</span>
+    </div>
+
+    <h2 class="quests__title">
+      I don't really<br />
+      do one thing.
+    </h2>
+
+    <div class="quests__grid">
+
+      <article class="quest">
+
+        <div class="quest__number">01</div>
+
+        <div class="quest__image">
+          <!--
+            PUT A RUNNING / SPORTS PHOTO HERE:
+
+            assets/quests/sport.jpg
+          -->
+          <img
+            src="assets/quests/sports.jpeg"
+            alt="Manit — sport"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="quest__body">
+          <h3>SPORT</h3>
+
+          <p>
+            Running, competing and seeing how far I can push the next
+            version of myself.
+          </p>
+
+          <span>RUN · PLAY · REPEAT</span>
+        </div>
+
+      </article>
+
+
+      <article class="quest">
+
+        <div class="quest__number">02</div>
+
+        <div class="quest__image">
+          <!--
+            PUT A MODELING / EDITORIAL PHOTO HERE:
+
+            assets/quests/modeling.jpg
+          -->
+          <img
+            src="assets/quests/modeling.jpeg"
+            alt="Manit — modeling"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="quest__body">
+          <h3>MODELING</h3>
+
+          <p>
+            Exploring the other side of the camera and learning how
+            different kinds of images are built.
+          </p>
+
+          <span>FRAME · FORM · CAMERA</span>
+        </div>
+
+      </article>
+
+
+      <article class="quest">
+
+        <div class="quest__number">03</div>
+
+        <div class="quest__image">
+          <!--
+            PUT A BEHIND-THE-SCENES / CAMERA PHOTO HERE:
+
+            assets/quests/behind-the-scenes.jpg
+          -->
+          <img
+            src="assets/quests/behind-the-scenes.jpeg"
+            alt="Behind the scenes"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="quest__body">
+          <h3>FILM</h3>
+
+          <p>
+            Direction, cinematography, editing and figuring out how
+            to turn an idea into something people can see.
+          </p>
+
+          <span>DIRECT · SHOOT · EDIT</span>
+        </div>
+
+      </article>
+
+
+      <article class="quest">
+
+        <div class="quest__number">04</div>
+
+        <div class="quest__image">
+          <!--
+            PUT A CONTENT CREATION PHOTO HERE:
+
+            assets/quests/content.jpg
+          -->
+          <img
+            src="assets/quests/content.jpeg"
+            alt="Content creation"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="quest__body">
+          <h3>CONTENT</h3>
+
+          <p>
+            Short-form ideas, social content, experiments and the
+            occasional idea that refuses to stay in my notes app.
+          </p>
+
+          <span>CREATE · TEST · POST</span>
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ==========================================================
+     05 · ABOUT
+========================================================== -->
+<section class="sec sec--dark about" id="about">
+
+  <div class="stage">
+
+    <img
+      src="assets/el/cd-a.png"
+      alt=""
+      class="el el--cd-a"
+      aria-hidden="true"
+    />
+
+    <img
+      src="assets/el/cd-b.png"
+      alt=""
+      class="el el--cd-b"
+      aria-hidden="true"
+    />
+
+    <div class="about__top">
+
+      <div class="section-label">
+        <span>05</span>
+        <span>ABOUT ME</span>
+      </div>
+
+      <div class="about__location">
+        DELHI / INDIA
+      </div>
+
+    </div>
+
+    <h2 class="about__title">
+      nice to<br />
+      meet you.
+    </h2>
+
+    <div class="about__content">
+
+      <div class="about__portrait">
+
+        <!--
+          PUT YOUR BEST PORTRAIT HERE:
+
+          assets/me/portrait.jpg
+
+          A clean portrait / editorial photo works best.
+        -->
+
+        <img
+          src="assets/me/portrait.jpeg"
+          alt="Manit Singh"
+          loading="lazy"
+        />
+
+      </div>
+
+      <div class="about__copy">
+
+        <p class="about__lead">
+          I'm Manit — a student based in Delhi,
+          constantly picking up new side quests.
+        </p>
+
+        <p>
+          I study B.Tech while exploring filmmaking,
+          content creation, sports, modeling and whatever
+          else catches my curiosity next.
+        </p>
+
+        <p>
+          I like making things, learning things and
+          occasionally doing things that definitely
+          weren't part of the original plan.
+        </p>
+
+        <p>
+          This website is basically a record of those
+          side quests.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="about__tags">
+
+      <span>FILMMAKING</span>
+      <span>CONTENT</span>
+      <span>SPORT</span>
+      <span>MODELING</span>
+      <span>PHOTOGRAPHY</span>
+      <span>EXPERIMENTS</span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ==========================================================
+     06 · CONTACT
+========================================================== -->
+<section class="sec sec--dark contact" id="contact">
+
+  <div class="stage">
+
+    <img
+      src="assets/el/cards.png"
+      alt=""
+      class="el el--cards"
+      aria-hidden="true"
+    />
+
+    <div class="contact__headline">
+      <h2> <br /> </h2>
+      <em>Let's make something.</em>
+    </div>
+
+    <div class="contact__top">
+      <div class="section-label">
+        <span>06</span>
+        <span>CONTACT</span>
+      </div>
+      <span>LET'S MAKE SOMETHING.</span>
+    </div>
+
+    <p class="contact__copy">
+      Creative projects, collaborations,<br />
+      interesting ideas — I'm always open.
+    </p>
+
+    <div class="contact__links">
+
+      <a href="https://drive.google.com/drive/folders/1dsKXWrY1XXv2qIFj0Zm4pNfTj6CVyOpG">
+        <span>DRIVE</span>
+        <strong>My Work</strong>
+      </a>
+
+      <a
+        href="https://www.instagram.com/maniiittttt/"
+        target="_blank"
+        rel="noopener"
+      >
+        <span>INSTAGRAM</span>
+        <strong>@maniiittttt</strong>
+      </a>
+
+    </div>
+
+    <div class="contact__footer">
+
+      <span>MANIT SINGH</span>
+
+      <span>
+        STUDENT · CREATOR · FILMMAKER
+      </span>
+
+      <span>
+        © 2026
+      </span>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- Background audio is now OPT-IN -->
+<audio
+  id="bgAudio"
+  src="assets/audio/theme.mp3"
+  loop
+  preload="metadata"
+  playsinline
+></audio>
+
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.1/examples/jsm/"
+  }
+}
+</script>
+
+<script src="js/data.js"></script>
+<script src="js/contours.js"></script>
+<script src="js/main.js"></script>
+<script src="js/track.js"></script>
+
+<script
+  type="module"
+  src="js/psp.js"
+></script>
+
+</body>
+</html>
